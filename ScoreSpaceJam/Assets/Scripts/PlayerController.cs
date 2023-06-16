@@ -43,6 +43,17 @@ public class PlayerController : MonoBehaviour
         //playerInput = GetComponent<PlayerInput>();
         
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            JumpUp();
+        }
+    }
+    private void JumpUp()
+    {
+        Player.AddForce(Vector3.up * 15f, ForceMode.Impulse);
+    }
     private void FixedUpdate()
     {
         PlayerMovement();
@@ -138,12 +149,12 @@ public class PlayerController : MonoBehaviour
         if (playerInputActions != null)
         {
             Vector2 inputVector = playerInputActions.Gameplay.Movement.ReadValue<Vector2>();
-            Player.AddTorque(new Vector3(inputVector.y, 0, -inputVector.x) * playerSpeed, ForceMode.Force);
+            Player.AddTorque(new Vector3(inputVector.y, 0, -inputVector.x) * playerSpeed * Time.deltaTime, ForceMode.Force);
             Debug.Log(inAir);
             if(!inAir)
-                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed, ForceMode.Force);
+                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed * Time.deltaTime, ForceMode.Force);
             else
-                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed/2, ForceMode.Force);
+                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed/2 * Time.deltaTime, ForceMode.Force);
             //setCamera.setLocation(inputVector);
         }
     }
