@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18035275, g: 0.2257897, b: 0.30702734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 263234194}
   - component: {fileID: 263234193}
   - component: {fileID: 263234192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1165,7 +1165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391338982}
   - component: {fileID: 391338983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 414261903}
   - component: {fileID: 414261902}
   - component: {fileID: 414261901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1513,7 @@ GameObject:
   - component: {fileID: 447501509}
   - component: {fileID: 447501508}
   - component: {fileID: 447501507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2031,6 +2031,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2036647323547835220, guid: eabf90e199b82864da2634a6d7000895,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3759097391499192273, guid: eabf90e199b82864da2634a6d7000895,
         type: 3}
       propertyPath: m_Name
@@ -2049,7 +2054,7 @@ PrefabInstance:
     - target: {fileID: 5165120152447648375, guid: eabf90e199b82864da2634a6d7000895,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0068833
+      value: 0.5578387
       objectReference: {fileID: 0}
     - target: {fileID: 5165120152447648375, guid: eabf90e199b82864da2634a6d7000895,
         type: 3}
@@ -2089,6 +2094,11 @@ PrefabInstance:
     - target: {fileID: 5165120152447648375, guid: eabf90e199b82864da2634a6d7000895,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347689899512247047, guid: eabf90e199b82864da2634a6d7000895,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2433,7 +2443,7 @@ GameObject:
   - component: {fileID: 972624912}
   - component: {fileID: 972624911}
   - component: {fileID: 972624910}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeNW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2622,7 +2632,7 @@ GameObject:
   - component: {fileID: 998398538}
   - component: {fileID: 998398537}
   - component: {fileID: 998398536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3034,7 +3044,7 @@ GameObject:
   - component: {fileID: 1126740237}
   - component: {fileID: 1126740236}
   - component: {fileID: 1126740235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeSW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4405,7 +4415,7 @@ GameObject:
   - component: {fileID: 1648276762}
   - component: {fileID: 1648276761}
   - component: {fileID: 1648276760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4510,7 +4520,7 @@ GameObject:
   - component: {fileID: 1771639492}
   - component: {fileID: 1771639491}
   - component: {fileID: 1771639490}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeNE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5198,7 @@ GameObject:
   - component: {fileID: 1874806475}
   - component: {fileID: 1874806474}
   - component: {fileID: 1874806473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6633,6 +6643,7 @@ GameObject:
   - component: {fileID: 4459931267243322681}
   - component: {fileID: 4459931267243322676}
   - component: {fileID: 4459931267243322687}
+  - component: {fileID: 4459931267243322688}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -6719,7 +6730,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940380804701648772}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4bd9d57fdb7f18740aa6e5d033688c46, type: 3}
@@ -6957,6 +6968,9 @@ MonoBehaviour:
   TimeCount: {fileID: 87448062}
   Finish: {fileID: 0}
   GameOver: {fileID: 0}
+  floor:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!65 &4459931267243322682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7105,6 +7119,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+--- !u!114 &4459931267243322688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3940380804701648772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803613426ce22d54cb3edd2eecbf11af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4511372203431023089
 Transform:
   m_ObjectHideFlags: 0

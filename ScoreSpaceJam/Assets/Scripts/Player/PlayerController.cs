@@ -19,7 +19,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TMP_Text TimeCount;
     [SerializeField] TMP_Text Finish;
     [SerializeField] TMP_Text GameOver;
+    public LayerMask floor;
     private bool inAir = false;
+    private bool doubleJump;
     private Rigidbody Player;
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
@@ -45,14 +47,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && (!inAir || doubleJump))
         {
             JumpUp();
+            doubleJump = false;
         }
     }
     private void JumpUp()
     {
         Player.AddForce(Vector3.up * 15f, ForceMode.Impulse);
+        doubleJump = false;
     }
     private void FixedUpdate()
     {
@@ -77,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
     private void GroundCheck()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, groundCheckHeight))
+        if (Physics.Raycast(transform.position, Vector3.down, groundCheckHeight, floor))
         {
             inAir = false;
             safeLocation = transform.position;
@@ -106,6 +110,14 @@ public class PlayerController : MonoBehaviour
             else
                 GameOver.enabled = true;
             stopTime = true;
+        }
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            GetComponent<Health>().Damage(1);
+            // Later we can put the next line in
+            //GetComponent<Health>().Damage(collision.gameObject.GetComponent<damagevaluescript>().damage);
+             
+
         }
     }
     private void Respawn()
@@ -192,7 +204,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         CanJump = true;
     }
-
 
 
 }
