@@ -20,7 +20,6 @@ public class CoinSpawner : MonoBehaviour
     {
         if(_nextSpawnTimer >= _NextSpawnTime) 
         {
-            Debug.Log("Try spawn coin");
             SpawnNextCoin();
             _nextSpawnTimer = 0;
         }
@@ -40,7 +39,6 @@ public class CoinSpawner : MonoBehaviour
         if(Physics.Raycast(checkOrigin, Vector3.down, out RaycastHit hit, _SpawnCheckYOffset * 2, _CoinSpawnLayer))
         {
             SpawnCoin(_CoinPrefab, hit.point + new Vector3(0,_SpawnCheckYOffset,0));
-            Debug.Log("spawn coin");
         }
     }
 
@@ -51,7 +49,7 @@ public class CoinSpawner : MonoBehaviour
         //coin.GetComponent<CoinsScript>().Init();
     }
 
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(this.transform.position, new Vector3(_SpawnAreDimensions.x * 2, _SpawnCheckYOffset * 2, _SpawnAreDimensions.y * 2));   
