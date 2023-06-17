@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 inputVector = playerInputActions.Gameplay.Movement.ReadValue<Vector2>();
             Player.AddTorque(new Vector3(inputVector.y, 0, -inputVector.x) * playerSpeed * Time.deltaTime, ForceMode.Force);
-            Debug.Log(inAir);
+            //Debug.Log(inAir);
             if(!inAir)
                 Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed * Time.deltaTime, ForceMode.Force);
             else
