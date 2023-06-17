@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Score
+  - DamageZone
   layers:
   - Default
   - TransparentFX

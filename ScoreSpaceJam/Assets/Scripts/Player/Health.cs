@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 
 public interface IDamagable{
     void Damage(int value);
@@ -10,6 +10,7 @@ public interface IDamagable{
 
 public class Health : MonoBehaviour, IDamagable
 {
+    public Slider healthSlider;
     private int _currentHealth = 5;
     private int _currentMaxHealth = 5;
 
@@ -33,11 +34,15 @@ public class Health : MonoBehaviour, IDamagable
     void Start()
     {
         _currentHealth = _currentMaxHealth;
+        healthSlider.maxValue = _currentMaxHealth;
+        healthSlider.value = _currentHealth;
     }
 
     public void AddMaxHealth(int value)
     {
         _currentMaxHealth += value;
+        healthSlider.maxValue = _currentMaxHealth;
+
     }
 
     public virtual void Damage(int dmgValue)
@@ -50,8 +55,9 @@ public class Health : MonoBehaviour, IDamagable
             } else 
                 OnDamaged.Invoke();
 
-            
-        }      
+            healthSlider.value = _currentHealth;
+
+        }
     }
 
     public virtual void Heal(int healValue)
@@ -63,6 +69,7 @@ public class Health : MonoBehaviour, IDamagable
                 _currentHealth += healValue;
             }
             OnHealed.Invoke();
+            healthSlider.value = _currentHealth;
         } 
     }
 }
