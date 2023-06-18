@@ -26,28 +26,59 @@ public class LevelManager : MonoBehaviour
 
     [Space] [Space]
     [SerializeField] public AnimationCurve _DamageZoneSpawnFrequencyCurve;
+    public float spawnDelay;
     [SerializeField] public AnimationCurve _DamageZoneMoveSpeedCurve;
+    public float dmgZoneSpeed;
+
     [Space]
     [SerializeField] public AnimationCurve _GroundChangingCurve;
+    public float groundChangeDelay;
     [Space]
     [Space]
     [SerializeField] public AnimationCurve _MusicInstrumentsCurve;
+    public float nextIntrument;
+
+    void Start()
+    {
+        CurrentScore = 0;
+        UpdateScore(0);
+    }
 
     public void UpdateScore(float currentScore)
     {
+        if(currentScore > 99) return;   
         CurrentScore = (int)currentScore;
+        
+        OnScoreUpate();
+    }
+
+    void OnScoreUpate()
+    {
         _ScoreUI.text = "Score: " + CurrentScore * 100;
 
         HandleDifficultyScale();
-    } 
+
+
+        HandleDamageZoneSpawnFrequency();
+        HandleDamageZoneSpeed();
+        HandleGroundChangingSpeed();
+
+        HandleInstrumentsNumber();
+    }
 
     public void AddPoint()
     {
         CurrentScore++;  
 
-        _ScoreUI.text = "Score: " + CurrentScore * 100;
+        OnScoreUpate(); 
+    }
 
-        HandleDifficultyScale(); 
+    public void FinalLevel()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            AddPoint();
+        }
     }
 
     void HandleDifficultyScale()
@@ -76,10 +107,33 @@ public class LevelManager : MonoBehaviour
         nextExperience = (int)_DifficultyLevelCurve.Evaluate(currentLevel+1);
 
         remainingExperience = (nextExperience - CurrentScore);
-
     }
 
+    void HandleDamageZoneSpawnFrequency()
+    {
+        spawnDelay = _DamageZoneSpawnFrequencyCurve.Evaluate(currentLevel);
+
+        _DmgZoneSpawner.SetSpawnDelay(spawnDelay);
+    }
+
+    void HandleDamageZoneSpeed()
+    {
+        dmgZoneSpeed =_DamageZoneMoveSpeedCurve.Evaluate(currentLevel);
+
+        _DmgZoneSpawner.SetEntitySpeed(dmgZoneSpeed);
+    }
+
+    void HandleGroundChangingSpeed()
+    {
+        groundChangeDelay = _GroundChangingCurve.Evaluate(currentLevel);
+
+        _GroundContoller.SetUpdateDelay(groundChangeDelay);
+    }
+
+    void HandleInstrumentsNumber()
+    {
+        nextIntrument =_MusicInstrumentsCurve.Evaluate(currentLevel);
+
+        //Add instruments
+    }
 }
-
-
-

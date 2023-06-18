@@ -106,6 +106,11 @@ public class EntityPassageController : MonoBehaviour
         
     }
 
+    public void SetSpawnDelay(float value)
+    {
+        _SpawnDelay = value;
+    }
+
     public void SetEntitySpeed(float value)
     {
         _EntitySpeed = value;

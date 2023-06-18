@@ -717,9 +717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score
-
-'
+  m_text: 'Score: 4400'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -942,7 +940,7 @@ MonoBehaviour:
   - {fileID: 1648276764}
   - {fileID: 972624914}
   - {fileID: 1126740239}
-  _GroundUpdateTime: 5
+  _GroundUpdateTime: 10
   _NumberOfUpdatingPlatforms: 1
 --- !u!1 &392128048
 GameObject:
@@ -1674,7 +1672,7 @@ MonoBehaviour:
   _PassageType: 0
   _Radius: 70
   _MaxPassageAngle: 15
-  _SpawnDelay: 5
+  _SpawnDelay: 4.6937485
   _collider: {fileID: 923710708}
 --- !u!23 &923710705
 MeshRenderer:
@@ -2508,27 +2506,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b51e2a5a8e7a454a876c7700db49d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScoreUI: {fileID: 0}
+  _ScoreUI: {fileID: 274736423}
   CurrentScore: 0
-  _GroundContoller: {fileID: 0}
-  _DmgZoneSpawner: {fileID: 0}
+  _GroundContoller: {fileID: 391338983}
+  _DmgZoneSpawner: {fileID: 923710703}
   _DifficultyLevelCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: 9.99
-      outSlope: 9.99
-      tangentMode: 34
+      value: 0
+      inSlope: 2.2373633
+      outSlope: 2.2373633
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
+      outWeight: 0.12888181
+    - serializedVersion: 3
+      time: 50
+      value: 300
+      inSlope: 11.602633
+      outSlope: 11.602633
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11696587
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 79.38062
+      value: 498.99213
+      inSlope: 2.3805153
+      outSlope: 2.3805153
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 90.2505
+      value: 619.0145
+      inSlope: 14.288814
+      outSlope: 14.288814
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12306074
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 100
       value: 1000
-      inSlope: 9.99
-      outSlope: 9.99
+      inSlope: 43.04611
+      outSlope: 43.04611
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.082845725
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  currentLevel: 0
+  previousExperience: 0
+  nextExperience: 0
+  remainingExperience: 0
+  _DamageZoneSpawnFrequencyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10
+      inSlope: -0.11251436
+      outSlope: -0.11251436
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.65991664
+    - serializedVersion: 3
+      time: 47.414497
+      value: 5.02623
+      inSlope: -0.032131057
+      outSlope: -0.032131057
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.54512745
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 73.25357
+      value: 4.035226
+      inSlope: -0.07693759
+      outSlope: -0.07693759
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.44649225
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 100
+      value: 0.5
+      inSlope: -0.13217562
+      outSlope: -0.13217562
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -2536,10 +2607,82 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  currentDifficultyLevel: 0
-  previousScore: 0
-  nextScore: 0
-  remainingScore: 0
+  spawnDelay: 0
+  _DamageZoneMoveSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: 0.042725928
+      outSlope: 0.042725928
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50.451157
+      value: 4.1555724
+      inSlope: 0.062545426
+      outSlope: 0.062545426
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.29056832
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 85.2443
+      value: 6.9536743
+      inSlope: 0.1359442
+      outSlope: 0.1359442
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 100
+      value: 10
+      inSlope: 0.20645079
+      outSlope: 0.20645079
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  dmgZoneSpeed: 0
+  _GroundChangingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10
+      inSlope: -0.075
+      outSlope: -0.075
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 100
+      value: 2.5
+      inSlope: -0.075
+      outSlope: -0.075
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  groundChangeDelay: 0
+  _MusicInstrumentsCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  nextIntrument: 0
 --- !u!1001 &1239595090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4743,7 +4886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 1190676593}
 --- !u!114 &4459931267243322688
 MonoBehaviour:
   m_ObjectHideFlags: 0

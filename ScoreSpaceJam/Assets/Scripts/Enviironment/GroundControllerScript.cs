@@ -36,4 +36,9 @@ public class GroundControllerScript : MonoBehaviour
 
         return _GroundSegments[index];
     }
+
+    public void SetUpdateDelay(float value)
+    {
+        _GroundUpdateTime = value;
+    }
 }
