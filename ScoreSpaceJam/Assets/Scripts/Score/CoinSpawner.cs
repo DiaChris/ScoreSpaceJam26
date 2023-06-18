@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _CoinPrefab;
+    [SerializeField] private List<GameObject> _objectPrefabs;
 
     [Space] [Header("Spawner Settings (Scaling with Score)")]
     [Tooltip("Time delay between spawn calls")]
@@ -38,7 +38,7 @@ public class CoinSpawner : MonoBehaviour
         Debug.DrawRay(checkOrigin, Vector3.down, Color.yellow, 5);
         if(Physics.Raycast(checkOrigin, Vector3.down, out RaycastHit hit, _SpawnCheckYOffset * 2, _CoinSpawnLayer))
         {
-            SpawnCoin(_CoinPrefab, hit.point + new Vector3(0,_SpawnCheckYOffset,0));
+            SpawnCoin(_objectPrefabs[Random.Range(0,_objectPrefabs.Count)], hit.point + new Vector3(0,_SpawnCheckYOffset,0));
         }
     }
 

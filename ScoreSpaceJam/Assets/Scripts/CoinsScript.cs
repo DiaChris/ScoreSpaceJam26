@@ -71,20 +71,26 @@ public class CoinsScript : MonoBehaviour
     }
     private void MoveToPosition()
     {
-
-
         if (!_hasPosition) {
             _targetPosition = GetPosition();
         }
         Vector2 targetPostionWithoutY = new Vector2(_targetPosition.x, _targetPosition.z);
         Vector2 objectPostionWithoutY = new Vector2(transform.position.x, transform.position.z);
+
         if (Vector3.Distance(targetPostionWithoutY, objectPostionWithoutY) < 5f) 
             _hasPosition = false;
+
         Vector3 directionInVector = _targetPosition - this.transform.position;
         directionInVector.y = 0f;
         CheckForObstacle(directionInVector);
+        if (_rigidbody.angularVelocity.magnitude < movementSpeed)
+        {
+            _rigidbody.AddTorque(new Vector3(directionInVector.z,0,-directionInVector.x) * movementSpeed * Time.deltaTime * 50f, ForceMode.Force);
+        }
         if (_rigidbody.velocity.magnitude < movementSpeed && GroundCheck())
-            _rigidbody.AddForce(directionInVector.normalized * movementSpeed * Time.deltaTime * 100f);
+        {
+            _rigidbody.AddForce(directionInVector * movementSpeed / 2 * Time.deltaTime * 100f, ForceMode.Force);
+        }
         else
         {
             Vector3 coinVelocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
@@ -99,8 +105,8 @@ public class CoinsScript : MonoBehaviour
     }
     private void CheckForObstacle(Vector3 direction)
     {
-        Debug.DrawRay(transform.position - new Vector3(0, 1f, 0), direction * obstacleDetectionDistance , Color.red);
-        if (Physics.Raycast(transform.position - new Vector3(0, 1f,0), direction, obstacleDetectionDistance,floorLayer))
+        Debug.DrawRay(transform.position, direction * obstacleDetectionDistance , Color.red);
+        if (Physics.Raycast(transform.position, direction, obstacleDetectionDistance,floorLayer))
         {
             Jump();
         }
