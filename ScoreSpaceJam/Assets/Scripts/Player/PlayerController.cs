@@ -94,29 +94,29 @@ public class PlayerController : MonoBehaviour
         else
             inAir = true;
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        hitSound.Play();
-        if (collision.gameObject.tag == "finish")
-        {
-            if (float.Parse(TimeCount.text) <= 180)
-            {
-                Finish.enabled = true;
-                jumpSound.Play();
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
-                Instantiate(conffetiParticles);
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    hitSound.Play();
+    //    if (collision.gameObject.tag == "finish")
+    //    {
+    //        if (float.Parse(TimeCount.text) <= 180)
+    //        {
+    //            Finish.enabled = true;
+    //            jumpSound.Play();
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
+    //            Instantiate(conffetiParticles);
 
-            }
-            else
-                GameOver.enabled = true;
-            stopTime = true;
-        }
-    }
+    //        }
+    //        else
+    //            GameOver.enabled = true;
+    //        stopTime = true;
+    //    }
+    //}
     private void Respawn()
     {
         if (transform.position.y <= -30)
@@ -193,7 +193,8 @@ public class PlayerController : MonoBehaviour
         {
             CanJump = false;
             Instantiate(conffetiParticles);
-            Player.AddExplosionForce(jumpHeight, explosionPosition.position, 10);
+            Player.AddForce(-(explosionPosition.position-transform.position) * jumpHeight, ForceMode.Force);
+            //Player.AddExplosionForce(jumpHeight, explosionPosition.position, 10);
             jumpAn.Play("Jump");
             StartCoroutine(JumpCooldown());
             jumpSound.Play();
