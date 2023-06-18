@@ -160,7 +160,6 @@ public class PlayerController : MonoBehaviour
             {
                 Vector3 playerVelocity = new Vector3(Player.angularVelocity.x, Player.angularVelocity.y, Player.angularVelocity.z);
                 playerVelocity = playerVelocity.normalized * playerSpeed;
-                playerVelocity = playerVelocity.normalized * playerSpeed;
                 Player.angularVelocity = playerVelocity;
             }
             //Debug.Log(inAir);
