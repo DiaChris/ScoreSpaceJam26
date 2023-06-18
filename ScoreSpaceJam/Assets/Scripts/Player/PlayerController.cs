@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float playerSpeed = 6.0f;
+    [SerializeField] float playerSpeed;
     [SerializeField] Transform targetTransform;
     [SerializeField] float Strenght;
     [SerializeField] Transform explosionPosition;
@@ -157,13 +157,33 @@ public class PlayerController : MonoBehaviour
     {
         if (playerInputActions != null)
         {
-            Vector2 inputVector = playerInputActions.Gameplay.Movement.ReadValue<Vector2>();
-            Player.AddTorque(new Vector3(inputVector.y, 0, -inputVector.x) * playerSpeed * Time.deltaTime, ForceMode.Force);
-            //Debug.Log(inAir);
-            if(!inAir)
-                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed * Time.deltaTime, ForceMode.Force);
+            Vector2 inputVector = playerInputActions.Gameplay.Movement.ReadValue<Vector2>().normalized;
+            Quaternion rotation = Quaternion.Euler(0, 45, 0);
+            if (Player.angularVelocity.magnitude < playerSpeed)
+            {
+                Player.AddTorque(rotation * new Vector3(inputVector.y, 0, -inputVector.x) * playerSpeed * Time.deltaTime * 100f, ForceMode.Force);
+            }
             else
-                Player.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed/2 * Time.deltaTime, ForceMode.Force);
+            {
+                Vector3 playerVelocity = new Vector3(Player.angularVelocity.x, Player.angularVelocity.y, Player.angularVelocity.z);
+                Debug.Log(playerVelocity);
+                playerVelocity = playerVelocity.normalized * playerSpeed;
+                Debug.Log("normalized velocity: " + playerVelocity);
+                Player.angularVelocity = playerVelocity;
+            }
+            //Debug.Log(inAir);
+            if (!inAir)
+                Player.AddForce(rotation * new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed * Time.deltaTime * 100f, ForceMode.Force);
+            else
+                Player.AddForce(rotation * new Vector3(inputVector.x, 0, inputVector.y) * playerSpeed/2 * Time.deltaTime * 100f, ForceMode.Force);
+            if(Player.velocity.magnitude > playerSpeed)
+            {
+                Vector3 playerVelocity = new Vector3(Player.velocity.x,0, Player.velocity.z);
+                Debug.Log(playerVelocity);
+                playerVelocity = playerVelocity.normalized * playerSpeed;
+                Debug.Log("normalized velocity: " + playerVelocity);
+                Player.velocity = new Vector3(playerVelocity.x,Player.velocity.y,playerVelocity.z);
+            }
             //setCamera.setLocation(inputVector);
         }
     }
