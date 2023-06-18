@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float groundCheckHeight;
     [SerializeField] Animator jumpAn;
     [SerializeField] ParticleSystem conffetiParticles;
+    [SerializeField] private AudioSource hitSound;
     [SerializeField] AudioSource jumpSound;
-    [SerializeField] AudioSource hitSound;
     [SerializeField] TMP_Text TimeCount;
     [SerializeField] TMP_Text Finish;
     [SerializeField] TMP_Text GameOver;
     public LayerMask floor;
     private bool inAir = false;
+    private bool canPlayHitSound = true;
     public bool bigDoubleJump;
     private bool doubleJump;
     private Rigidbody Player;
@@ -94,29 +95,7 @@ public class PlayerController : MonoBehaviour
         else
             inAir = true;
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    hitSound.Play();
-    //    if (collision.gameObject.tag == "finish")
-    //    {
-    //        if (float.Parse(TimeCount.text) <= 180)
-    //        {
-    //            Finish.enabled = true;
-    //            jumpSound.Play();
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-    //            Instantiate(conffetiParticles);
-
-    //        }
-    //        else
-    //            GameOver.enabled = true;
-    //        stopTime = true;
-    //    }
-    //}
+    
     private void Respawn()
     {
         if (transform.position.y <= -30)
@@ -140,6 +119,20 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Enable player controls
     /// </summary>
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (canPlayHitSound)
+        {
+            hitSound.Play();
+            canPlayHitSound = false;
+            StartCoroutine(CooldownForSound());
+        }
+    }
+    private IEnumerator CooldownForSound()
+    {
+        yield return new WaitForSeconds(.3f);
+        canPlayHitSound = true;
+    }
     private void OnEnable()
     {
         playerInputActions = new PlayerInputActions();
@@ -187,8 +180,6 @@ public class PlayerController : MonoBehaviour
     }
     private void Jump(InputAction.CallbackContext context)
     {
-        //moveOpener.enabled = true;
-        //Player.AddForce(Vector3.up * 5f, ForceMode.Impulse);
         if (!inAir && CanJump)
         {
             CanJump = false;
@@ -202,19 +193,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    //private void Attack(InputAction.CallbackContext context)
-    //{
-    //    playerWeaponManager.AttackWithWeapon();
-    //}
-    //private void AttackCanceled(InputAction.CallbackContext context)
-    //{
-    //    gunAttack.CancelAttack();
-    //}
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawLine(this.transform.position, new Vector3(this.transform.position.x, this.transform.position.y - groundCheckHeight, this.transform.position.z));
-    //}
     private IEnumerator JumpCooldown()
     {
         yield return new WaitForSeconds(0.5f);

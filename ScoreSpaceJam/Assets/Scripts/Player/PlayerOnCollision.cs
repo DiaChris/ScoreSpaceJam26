@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PlayerOnCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] AudioSource hitSound;
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        hitSound.Play();
     }
 }
