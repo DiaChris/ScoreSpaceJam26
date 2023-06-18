@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 820226547}
   - component: {fileID: 820226549}
   - component: {fileID: 820226550}
+  - component: {fileID: 820226551}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -701,6 +702,19 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &820226551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820226545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10234b1c727f46cf842c085ced58c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1577579658}
 --- !u!1 &850902293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,7 +1395,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
