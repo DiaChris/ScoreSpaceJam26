@@ -32,11 +32,9 @@ public class EntityPassageController : MonoBehaviour
     }
 
     void Update()
-    {
-        
-
-        Random.InitState(System.DateTime.Now.Millisecond);
+    {      
         if(_spawnDelayTimer >= _SpawnDelay) {
+            Random.InitState(System.DateTime.Now.Millisecond);
             SpawnEntity();
             _spawnDelayTimer = 0;
         }

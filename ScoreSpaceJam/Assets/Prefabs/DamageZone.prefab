@@ -609,7 +609,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -654,6 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25937954c3b4f44a9d5f0f45bd6bc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Damage: 0
 --- !u!114 &2676080367527989453
 MonoBehaviour:
   m_ObjectHideFlags: 0

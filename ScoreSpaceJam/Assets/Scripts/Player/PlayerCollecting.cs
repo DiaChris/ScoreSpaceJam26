@@ -21,20 +21,14 @@ public class PlayerCollecting : MonoBehaviour
         if (collision.gameObject.CompareTag("Score"))
         {
             score += collision.gameObject.GetComponent<CoinsScript>().points;
+
+
             if (collision.gameObject.GetComponent<CoinsScript>().givesdoublejump)
             {
                 GetComponent<PlayerController>().bigDoubleJump = true;
             }
-            if (collision.gameObject.GetComponent<CoinsScript>().healsplayer)
-            {
-                GetComponent<Health>().Heal(GetComponent<Health>().CurrentMaxHealth-GetComponent<Health>().CurrentHealth);
-                // heals player to full
-            }
-            if (collision.gameObject.GetComponent<CoinsScript>().maxHealth)
-            {
-                GetComponent<Health>().AddMaxHealth(5);
 
-            }
+
             Destroy(collision.gameObject);
 
         }

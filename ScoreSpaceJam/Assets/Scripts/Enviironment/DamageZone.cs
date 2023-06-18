@@ -5,15 +5,14 @@ using UnityEngine;
 [SelectionBase]
 public class DamageZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int _Damage;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider col)
     {
-        
+        IDamagable damagable = col.GetComponent<IDamagable>();
+        if(damagable != null) 
+        {
+            damagable.Damage(_Damage);
+        }
     }
 }

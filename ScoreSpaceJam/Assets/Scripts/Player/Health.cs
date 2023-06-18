@@ -28,7 +28,6 @@ public class Health : MonoBehaviour, IDamagable
 
     public UnityEvent OnDamaged;
     public UnityEvent OnHealthDepleted;
-
     public UnityEvent OnHealed;
 
     void Start()
@@ -42,7 +41,6 @@ public class Health : MonoBehaviour, IDamagable
     {
         _currentMaxHealth += value;
         healthSlider.maxValue = _currentMaxHealth;
-
     }
 
     public virtual void Damage(int dmgValue)

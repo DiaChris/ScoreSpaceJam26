@@ -116,14 +116,6 @@ public class PlayerController : MonoBehaviour
                 GameOver.enabled = true;
             stopTime = true;
         }
-        if (collision.gameObject.CompareTag("DamageZone"))
-        {
-            GetComponent<Health>().Damage(1);
-            // Later we can put the next line in
-            //GetComponent<Health>().Damage(collision.gameObject.GetComponent<damagevaluescript>().damage);
-            Destroy(collision.gameObject);
-
-        }
     }
     private void Respawn()
     {
