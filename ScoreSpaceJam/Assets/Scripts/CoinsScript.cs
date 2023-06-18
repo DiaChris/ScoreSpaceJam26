@@ -8,6 +8,7 @@ public class CoinsScript : MonoBehaviour
     public float points;
     public bool runningFromPlayer;
     public bool bobbingUpAndDown;
+    public bool givesdoublejump;
     public float speed;
     public int maxUp;
     public int maxDown;

@@ -21,7 +21,12 @@ public class PlayerCollecting : MonoBehaviour
         if (collision.gameObject.CompareTag("Score"))
         {
             score += collision.gameObject.GetComponent<CoinsScript>().points;
+            if (collision.gameObject.GetComponent<CoinsScript>().givesdoublejump)
+            {
+                GetComponent<PlayerController>().bigDoubleJump = true;
+            }
             Destroy(collision.gameObject);
+
         }
     }
 }

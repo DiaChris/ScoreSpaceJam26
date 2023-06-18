@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TMP_Text GameOver;
     public LayerMask floor;
     private bool inAir = false;
+    public bool bigDoubleJump;
     private bool doubleJump;
     private Rigidbody Player;
     private PlayerInput playerInput;
@@ -85,6 +86,10 @@ public class PlayerController : MonoBehaviour
         {
             inAir = false;
             safeLocation = transform.position;
+            if (bigDoubleJump)
+            {
+                doubleJump = true;
+            }
         }
         else
             inAir = true;
