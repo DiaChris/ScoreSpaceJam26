@@ -32,7 +32,7 @@ public class AdvancedDamageZoneController : MonoBehaviour
         bool midEnabled = mid > 4 ? true : false;
         bool downEnabled = down > 4 ? true : false;
 
-        Debug.Log(up + "-" + upEnabled + " | " + mid + "-" +  midEnabled + " | " + down + "-" +   downEnabled);
+       //Debug.Log(up + "-" + upEnabled + " | " + mid + "-" +  midEnabled + " | " + down + "-" +   downEnabled);
 
         if(!upEnabled && !midEnabled && !downEnabled) 
         {
