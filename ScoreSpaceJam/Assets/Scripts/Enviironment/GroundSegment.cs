@@ -81,7 +81,7 @@ public class GroundSegment : MonoBehaviour
         switch(position)
         {
             case GroundSegmentPosition.TOP:
-                targetPosition.y = _defaultPosition.y + _UpperPositionLimit;
+                targetPosition.y = _defaultPosition.y + _UpperPositionLimit;              
             break;
 
 
@@ -102,10 +102,17 @@ public class GroundSegment : MonoBehaviour
     
     private IEnumerator MoveCo(Vector3 targetPosition)
     {
+
+        //Debug.DrawLine(this.transform.position, targetPosition, Color.red, 5);
+        //Debug.Log(gameObject.name + " - " + targetPosition);
+
         while(Vector3.Distance(this.transform.position, targetPosition) > 0.05f)
         {           
-            //_rb.MovePosition(_defaultPosition + targetPosition * _MoveSpeed * Time.deltaTime);
-            this.transform.position = Vector3.MoveTowards (this.transform.position, targetPosition, Time.deltaTime * _MoveSpeed);
+            //Vector3 dir = (targetPosition - this.transform.position).normalized;
+           // _rb.MovePosition((this.transform.position + targetPosition) * _MoveSpeed * Time.deltaTime);
+            Vector3 newPosition = Vector3.MoveTowards (this.transform.position, targetPosition, Time.deltaTime * _MoveSpeed);
+            _rb.MovePosition(newPosition);
+            //this.transform.position = Vector3.MoveTowards (this.transform.position, targetPosition, Time.deltaTime * _MoveSpeed);
             
             yield return new WaitForEndOfFrame();
 
@@ -136,6 +143,7 @@ public class GroundSegment : MonoBehaviour
 
         int randomNum = Random.Range(0, positions.Count);
 
+        _CurrentPosition = positions[randomNum];
 
         return positions[randomNum];
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCollecting : MonoBehaviour
 {
     public float score;
+    public LevelManager LevelManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class PlayerCollecting : MonoBehaviour
         if (collision.gameObject.CompareTag("Score"))
         {
             score += collision.gameObject.GetComponent<CoinsScript>().points;
-
+            LevelManager.UpdateScore(score);
 
             if (collision.gameObject.GetComponent<CoinsScript>().givesdoublejump)
             {
