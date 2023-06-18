@@ -13,6 +13,7 @@ public class EntityPassageController : MonoBehaviour
     }
 
     [SerializeField] private PassageEntity _EntityPrefab;
+    [SerializeField] private float _EntitySpeed;
     [Space]
     [SerializeField] private PassageType _PassageType = PassageType.SPHERE;
     [SerializeField] private float _Radius;
@@ -97,8 +98,18 @@ public class EntityPassageController : MonoBehaviour
         //Spawn Entity on that point
         PassageEntity entity = GameObject.Instantiate(_EntityPrefab, this.transform.position + randomPoint, forwardRotation);
         entity.BeginPassage();
+
+        AdvancedDamageZoneController dmgCntrl = entity.GetComponent<AdvancedDamageZoneController>();
+        if(dmgCntrl != null){
+            dmgCntrl.Init(_EntitySpeed);
+        }
+        
     }
 
+    public void SetEntitySpeed(float value)
+    {
+        _EntitySpeed = value;
+    }
 
 
     void OnTriggerEnter(Collider col)

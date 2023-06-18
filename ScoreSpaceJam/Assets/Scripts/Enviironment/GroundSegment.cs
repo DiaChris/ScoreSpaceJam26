@@ -10,11 +10,9 @@ public enum GroundSegmentPosition {
         //JUNGLE XDDDDD ....... -_- why am i like this ... -krajst
     }
 
+[SelectionBase]
 public class GroundSegment : MonoBehaviour
 {
-    
-
-
     [SerializeField] private GroundSegmentPosition _CurrentPosition = GroundSegmentPosition.MID;
 
     [SerializeField] private float _UpperPositionLimit = 5;

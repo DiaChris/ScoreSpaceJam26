@@ -6,7 +6,6 @@ public class GroundControllerScript : MonoBehaviour
 {
     [SerializeField] private GroundSegment[] _GroundSegments;
     
-    
     private float _groundUpdateDelayTimer = 0;
 
     [Space] [Header("Difficulty Scaling")]

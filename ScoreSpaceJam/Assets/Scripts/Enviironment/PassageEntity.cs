@@ -10,6 +10,11 @@ public class PassageEntity : MonoBehaviour
     [SerializeField] private float _Speed;
 
     
+    public void SetSpeed(float speed)
+    {
+        _Speed = speed;
+    }
+
     public void BeginPassage()
     {
         _BeginPassage.Invoke();
