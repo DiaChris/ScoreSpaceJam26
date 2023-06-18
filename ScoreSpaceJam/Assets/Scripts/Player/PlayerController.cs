@@ -166,9 +166,8 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Vector3 playerVelocity = new Vector3(Player.angularVelocity.x, Player.angularVelocity.y, Player.angularVelocity.z);
-                //Debug.Log(playerVelocity);
                 playerVelocity = playerVelocity.normalized * playerSpeed;
-                //Debug.Log("normalized velocity: " + playerVelocity);
+                playerVelocity = playerVelocity.normalized * playerSpeed;
                 Player.angularVelocity = playerVelocity;
             }
             //Debug.Log(inAir);
@@ -179,9 +178,8 @@ public class PlayerController : MonoBehaviour
             if(Player.velocity.magnitude > playerSpeed)
             {
                 Vector3 playerVelocity = new Vector3(Player.velocity.x,0, Player.velocity.z);
-                //Debug.Log(playerVelocity);
                 playerVelocity = playerVelocity.normalized * playerSpeed;
-                //Debug.Log("normalized velocity: " + playerVelocity);
+                playerVelocity = playerVelocity.normalized * playerSpeed;
                 Player.velocity = new Vector3(playerVelocity.x,Player.velocity.y,playerVelocity.z);
             }
             //setCamera.setLocation(inputVector);

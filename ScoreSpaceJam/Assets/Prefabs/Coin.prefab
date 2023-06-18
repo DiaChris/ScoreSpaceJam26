@@ -137,6 +137,14 @@ MonoBehaviour:
   maxDown: 7
   player: {fileID: 0}
   coefficient: 0
+  movementSpeed: 7
+  maxSpeed: 0
+  obstacleDetectionDistance: 6
+  jumpStrenght: 7
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundDetectionDistance: 1.7
 --- !u!135 &6247267745254514900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -144,7 +152,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2459432740524642780}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 93e68beaf3e546b40a4a162f58d4eef6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
