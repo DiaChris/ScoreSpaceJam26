@@ -9,6 +9,8 @@ public class CoinsScript : MonoBehaviour
     public bool runningFromPlayer;
     public bool bobbingUpAndDown;
     public bool givesdoublejump;
+    public bool healsplayer;
+    public bool maxHealth;
     public float speed;
     public int maxUp;
     public int maxDown;
