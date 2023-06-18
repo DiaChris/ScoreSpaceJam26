@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GroundControllerScript _GroundContoller;
 
     [SerializeField] private EntityPassageController _DmgZoneSpawner;
+    [SerializeField] private AudioController _AudioController;
     
     
     [Space] [Space]
@@ -36,7 +37,7 @@ public class LevelManager : MonoBehaviour
     [Space]
     [Space]
     [SerializeField] public AnimationCurve _MusicInstrumentsCurve;
-    public float nextIntrument;
+    public int nextIntrument = 1;
 
     void Start()
     {
@@ -132,8 +133,8 @@ public class LevelManager : MonoBehaviour
 
     void HandleInstrumentsNumber()
     {
-        nextIntrument =_MusicInstrumentsCurve.Evaluate(currentLevel);
+        nextIntrument = (int)_MusicInstrumentsCurve.Evaluate(currentLevel);
 
-        //Add instruments
+        _AudioController.SetTrack(nextIntrument - 1);
     }
 }

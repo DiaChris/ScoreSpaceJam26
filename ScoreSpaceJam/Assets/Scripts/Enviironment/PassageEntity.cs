@@ -32,7 +32,13 @@ public class PassageEntity : MonoBehaviour
     #region EntityMovement
     void StartMovement()
     {
-        this.GetComponent<Rigidbody>().velocity = this.transform.forward * _Speed;
+        //this.GetComponent<Rigidbody>().velocity = this.transform.forward * _Speed;
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 newPosition = Vector3.MoveTowards (this.transform.position, this.transform.position + this.transform.forward, Time.deltaTime * _Speed);
+        this.GetComponent<Rigidbody>().MovePosition(newPosition);
     }
     #endregion
 }

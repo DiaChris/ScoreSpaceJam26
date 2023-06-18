@@ -89,7 +89,7 @@ public class LevelManagerEditor : Editor
         {
             EditorGUILayout.BeginHorizontal("box");
             EditorGUILayout.LabelField("On level: " + (i));
-            EditorGUILayout.LabelField((data._MusicInstrumentsCurve.Evaluate(i)) + " value" );
+            EditorGUILayout.LabelField((int)(data._MusicInstrumentsCurve.Evaluate(i)) + " value" );
             EditorGUILayout.EndHorizontal();
         }
         EditorGUILayout.EndScrollView();

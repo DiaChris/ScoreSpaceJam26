@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 374006506709381800}
   - component: {fileID: 1330472749543013542}
   - component: {fileID: 783799098017673030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5861752644629637116}
   - component: {fileID: 8054269064216526111}
   - component: {fileID: 1394106368468402041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,8 @@ GameObject:
   - component: {fileID: 2321142519427502955}
   - component: {fileID: 7914377143464916732}
   - component: {fileID: 5613720434942852258}
-  m_Layer: 0
+  - component: {fileID: 6242404800355638841}
+  m_Layer: 6
   m_Name: DamageZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +221,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -289,6 +290,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6242404800355638841
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898483162962395103}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1092605955896350513
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +329,7 @@ GameObject:
   - component: {fileID: 9174072994423146098}
   - component: {fileID: 8695323584152209940}
   - component: {fileID: 5171143367942698646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +429,7 @@ GameObject:
   - component: {fileID: 7072844066788882946}
   - component: {fileID: 7625906457746675588}
   - component: {fileID: 2921453323568497383}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +513,7 @@ GameObject:
   - component: {fileID: 6133846162186359286}
   - component: {fileID: 9202817143266676109}
   - component: {fileID: 6570707252394903531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +597,7 @@ GameObject:
   - component: {fileID: 822622678647517593}
   - component: {fileID: 6400574547399149561}
   - component: {fileID: 4679876510990756034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5457662824785825122}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8034261918165872985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +749,7 @@ GameObject:
   - component: {fileID: 3467588730285003809}
   - component: {fileID: 8041364636941803267}
   - component: {fileID: 241411066205660347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +833,7 @@ GameObject:
   - component: {fileID: 2513799478949860825}
   - component: {fileID: 6385362486864131697}
   - component: {fileID: 4595496896070833406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +917,7 @@ GameObject:
   - component: {fileID: 472321533589279510}
   - component: {fileID: 2367184435557481692}
   - component: {fileID: 5120738460310612772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +1001,7 @@ GameObject:
   - component: {fileID: 1720430796630682674}
   - component: {fileID: 3268858211504192010}
   - component: {fileID: 3140789511665243201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4100430628622380179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,7 +1117,7 @@ GameObject:
   - component: {fileID: 508051183460618826}
   - component: {fileID: 9199507720821779888}
   - component: {fileID: 5419246837530749523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1201,7 @@ GameObject:
   - component: {fileID: 9042397889842866464}
   - component: {fileID: 944595817795411484}
   - component: {fileID: 6965875666344094261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1287,8 @@ GameObject:
   - component: {fileID: 4623019683729649169}
   - component: {fileID: 8238638372486203445}
   - component: {fileID: 4933307823180557907}
-  m_Layer: 0
+  - component: {fileID: 3688484854842670315}
+  m_Layer: 6
   m_Name: DamageZone (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1327,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1367,6 +1396,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3688484854842670315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998383104351385462}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &3012248690443688883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1434,7 @@ GameObject:
   - component: {fileID: 183203954498133644}
   - component: {fileID: 3454406069286429265}
   - component: {fileID: 496240759118214316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1462,7 +1518,7 @@ GameObject:
   - component: {fileID: 5492152443496261602}
   - component: {fileID: 7710608943134699025}
   - component: {fileID: 4701181716297220540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,7 +1602,7 @@ GameObject:
   - component: {fileID: 6953830954544296832}
   - component: {fileID: 8697560521061603480}
   - component: {fileID: 441408474812641500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1687,7 @@ GameObject:
   - component: {fileID: 9127957057808562330}
   - component: {fileID: 6452116548724196653}
   - component: {fileID: 1880473738392192548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1732,7 +1788,7 @@ GameObject:
   - component: {fileID: 7520255081048369609}
   - component: {fileID: 6908288375173419430}
   - component: {fileID: 2132972518832663421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1816,7 +1872,7 @@ GameObject:
   - component: {fileID: 3296005968896496270}
   - component: {fileID: 337838885865091827}
   - component: {fileID: 108971657161667500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +1956,7 @@ GameObject:
   - component: {fileID: 924932259134923098}
   - component: {fileID: 1283286309277884265}
   - component: {fileID: 7992007629839840098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1984,7 +2040,7 @@ GameObject:
   - component: {fileID: 5275126289124372253}
   - component: {fileID: 794234619671124908}
   - component: {fileID: 1012908862704585840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2066,7 +2122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9153489360053689943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2205,7 +2261,7 @@ GameObject:
   - component: {fileID: 5954656347402756070}
   - component: {fileID: 1502725234579432950}
   - component: {fileID: 6747360207499734986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2346,7 @@ GameObject:
   - component: {fileID: 3137330637966684913}
   - component: {fileID: 5776164569195333717}
   - component: {fileID: 2101174133961546222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2390,7 +2446,7 @@ GameObject:
   - component: {fileID: 544986419487648386}
   - component: {fileID: 1303520473404556753}
   - component: {fileID: 4999625883607494755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2475,7 +2531,7 @@ GameObject:
   - component: {fileID: 7072796275163032909}
   - component: {fileID: 8086933042199710622}
   - component: {fileID: 7880396200773817900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5741573111836357187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2609,7 +2665,7 @@ GameObject:
   - component: {fileID: 7654036293754989005}
   - component: {fileID: 3489225303786159612}
   - component: {fileID: 385139893433206636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2693,7 +2749,7 @@ GameObject:
   - component: {fileID: 5282877689692869577}
   - component: {fileID: 3701910159987286802}
   - component: {fileID: 6718168121404489515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2777,7 +2833,7 @@ GameObject:
   - component: {fileID: 8826508166198968369}
   - component: {fileID: 8753750004911197643}
   - component: {fileID: 3695997859451547209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2966,7 +3022,7 @@ GameObject:
   - component: {fileID: 5145568737764575422}
   - component: {fileID: 4412116331807987281}
   - component: {fileID: 6003042110382674358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3051,7 +3107,7 @@ GameObject:
   - component: {fileID: 5164817792895726899}
   - component: {fileID: 6837102613191830674}
   - component: {fileID: 3808059299187099369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,7 +3209,7 @@ GameObject:
   - component: {fileID: 5533664254395705095}
   - component: {fileID: 8809131343734917205}
   - component: {fileID: 4172689850314806432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3253,7 +3309,7 @@ GameObject:
   - component: {fileID: 131290289612852704}
   - component: {fileID: 2031962406172331705}
   - component: {fileID: 7645930034208112683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3393,7 @@ GameObject:
   - component: {fileID: 3286812558802473006}
   - component: {fileID: 6659188889353884655}
   - component: {fileID: 1113502649219780098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3422,7 +3478,7 @@ GameObject:
   - component: {fileID: 8989936217058329260}
   - component: {fileID: 6822355815680801375}
   - component: {fileID: 6891318463642647210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3523,7 +3579,7 @@ GameObject:
   - component: {fileID: 1140308864468649010}
   - component: {fileID: 9178807447118877627}
   - component: {fileID: 1367773880806179106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3679,7 @@ GameObject:
   - component: {fileID: 4629385370209813357}
   - component: {fileID: 7495941836412182199}
   - component: {fileID: 4828043915186450073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3707,7 +3763,7 @@ GameObject:
   - component: {fileID: 1078283231545615893}
   - component: {fileID: 3682412676527981745}
   - component: {fileID: 2817534417056021475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3791,7 +3847,7 @@ GameObject:
   - component: {fileID: 7277029070886654082}
   - component: {fileID: 1745626909927425133}
   - component: {fileID: 136078843398240809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,7 +3931,7 @@ GameObject:
   - component: {fileID: 7989586070107400222}
   - component: {fileID: 5617988887215512955}
   - component: {fileID: 3327090006025316980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +4016,7 @@ GameObject:
   - component: {fileID: 5757420053220326718}
   - component: {fileID: 4574751598167842180}
   - component: {fileID: 8284867677475079077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4061,7 +4117,7 @@ GameObject:
   - component: {fileID: 8749420935168525951}
   - component: {fileID: 89851114603209416}
   - component: {fileID: 255934706171631755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4143,7 +4199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8436915113522569647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ModelRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4177,7 +4233,7 @@ GameObject:
   - component: {fileID: 766654134746347611}
   - component: {fileID: 8301617554293819081}
   - component: {fileID: 9218661876042749383}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4263,7 +4319,8 @@ GameObject:
   - component: {fileID: 861506728756358765}
   - component: {fileID: 6946718202516275930}
   - component: {fileID: 7718819306724325260}
-  m_Layer: 0
+  - component: {fileID: 6309330517221626617}
+  m_Layer: 6
   m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4302,7 +4359,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4371,6 +4428,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6309330517221626617
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212460406677728124}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8625400303413423546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,7 +4601,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
@@ -4553,7 +4637,7 @@ GameObject:
   - component: {fileID: 3622932507871222799}
   - component: {fileID: 3868748465554608582}
   - component: {fileID: 9012184168664588844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

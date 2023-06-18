@@ -7,7 +7,8 @@ public class AudioController : MonoBehaviour
     [SerializeField] private AudioSource _AudioSource;
     [SerializeField] private List<AudioClip> _AudioClips;
 
-    private AudioClip _currentClip;
+    [SerializeField] private AudioClip _DeathMusic;
+
     public int _currentClipIndex = 0;
     
     void Start()
@@ -15,17 +16,9 @@ public class AudioController : MonoBehaviour
         StartCoroutine(NextAudioCo());
     }
 
-    void Update()
+    public void SetTrack(int index)
     {
-        //Debug.Log(_AudioSource.time);
-
-        
-    }
-
-    void NextAudioClip()
-    {
-       
-               
+        _currentClipIndex = index;
     }
 
     IEnumerator NextAudioCo()
@@ -35,6 +28,14 @@ public class AudioController : MonoBehaviour
             _AudioSource.PlayOneShot(_AudioClips[_currentClipIndex]);
             yield return new WaitForSeconds(_AudioClips[_currentClipIndex].length);
         }
+    }
+
+    public void PlayDeathMusic()
+    {
+        StopAllCoroutines();
+        _AudioSource.Stop();
+
+        _AudioSource.PlayOneShot(_DeathMusic, 0.15f);
     }
     
 }
