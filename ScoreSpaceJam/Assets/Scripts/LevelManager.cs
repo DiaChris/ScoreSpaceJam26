@@ -67,6 +67,11 @@ public class LevelManager : MonoBehaviour
         HandleInstrumentsNumber();
     }
 
+    public int GetScore()
+    {
+        return CurrentScore * 100;
+    }
+
     public void AddPoint()
     {
         CurrentScore++;  

@@ -9,11 +9,26 @@ public class Leaderboard : MonoBehaviour
     string leaderboardID = "15170";
     public TextMeshProUGUI playerNames;
     public TextMeshProUGUI playerScores;
+    public LevelManager mngr;
     // Start is called before the first frame update
     void Start()
     {
         
     }
+
+    public void SubmitScore()
+    {
+        StartCoroutine(SubmitScoreRoutine(mngr.GetScore()));
+
+        StartCoroutine(DelayCo());
+    }
+
+    IEnumerator DelayCo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        FetchTopHighscoresRoutine();
+    }
+
 
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
     {
