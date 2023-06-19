@@ -49,11 +49,13 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Z) && (!inAir || doubleJump))
         {
             JumpUp();
             doubleJump = false;
         }
+        */
     }
     private void JumpUp()
     {
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             Player.velocity = new Vector3(0, 0, 0);
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
             stopTime = false;
             //GameOver.enabled = false;
         }
+*/
         GroundCheck();
         Respawn();
         if (!stopTime)
@@ -100,10 +104,13 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= -30)
         {
+            this.GetComponent<OnDeath>().UnlivePlayer();
+            /*
             Player.velocity = new Vector3(0, 0, 0);
             transform.rotation = Quaternion.Euler(new Vector3(0,0,0));
             Player.angularVelocity = new Vector3(0, 0, 0);
             transform.position = safeLocation;
+            */
         }
     }
     //private void OnCollisionEnter(Collision collision)
