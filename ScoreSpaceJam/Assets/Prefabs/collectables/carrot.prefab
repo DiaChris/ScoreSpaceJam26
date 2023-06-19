@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 4309026216186189283}
   - component: {fileID: 6823214864311647108}
   - component: {fileID: 7778141208962380942}
+  - component: {fileID: 7636635019410664202}
   m_Layer: 0
   m_Name: carrot
   m_TagString: Score
@@ -139,7 +140,7 @@ Transform:
   m_Children:
   - {fileID: 660711948347279471}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6823214864311647108
 MonoBehaviour:
@@ -199,3 +200,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7636635019410664202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131391101849424683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 0.4783347, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
