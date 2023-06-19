@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
         if (!inAir && CanJump)
         {
             CanJump = false;
-            Instantiate(conffetiParticles);
+            Instantiate(conffetiParticles,this.transform.position,this.transform.rotation);
             Player.AddForce(-(explosionPosition.position-transform.position) * jumpHeight, ForceMode.Force);
             //Player.AddExplosionForce(jumpHeight, explosionPosition.position, 10);
             jumpAn.Play("Jump");

@@ -10,6 +10,8 @@ public interface IDamagable{
 
 public class Health : MonoBehaviour, IDamagable
 {
+    [SerializeField] private ParticleSystem sparks;
+    [SerializeField] private AudioSource _takeDamageSound;
     public Slider healthSlider;
     private int _currentHealth = 5;
     private int _currentMaxHealth = 5;
@@ -45,7 +47,9 @@ public class Health : MonoBehaviour, IDamagable
 
     public virtual void Damage(int dmgValue)
     {
-        if(_currentHealth > 0) {
+        _takeDamageSound.Play();
+        Instantiate(sparks, this.transform.position, this.transform.rotation);
+        if (_currentHealth > 0) {
             _currentHealth -= dmgValue;
 
             if(_currentHealth <= 0) {
