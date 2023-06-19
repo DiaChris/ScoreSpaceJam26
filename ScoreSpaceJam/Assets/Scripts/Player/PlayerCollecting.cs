@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCollecting : MonoBehaviour
 {
+    [SerializeField] private AudioSource collectSound;
     public float score;
     public LevelManager LevelManager;
     
@@ -22,6 +23,7 @@ public class PlayerCollecting : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Score"))
         {
+            collectSound.Play();
             score += collision.gameObject.GetComponent<CoinsScript>().points;
             LevelManager.UpdateScore(score);
 
