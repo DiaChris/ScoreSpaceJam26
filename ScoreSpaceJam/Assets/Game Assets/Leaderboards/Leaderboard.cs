@@ -26,9 +26,13 @@ public class Leaderboard : MonoBehaviour
     IEnumerator DelayCo()
     {
         yield return new WaitForSeconds(0.5f);
-        FetchTopHighscoresRoutine();
+       StartCoroutine(FetchTopHighscoresRoutine());
     }
 
+    public void Refresh()
+    {
+        StartCoroutine(FetchTopHighscoresRoutine());
+    }
 
     public IEnumerator SubmitScoreRoutine(int scoreToUpload)
     {
