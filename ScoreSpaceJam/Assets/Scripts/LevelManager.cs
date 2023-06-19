@@ -39,6 +39,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public AnimationCurve _MusicInstrumentsCurve;
     public int nextIntrument = 1;
 
+
+    public int debugNumber = 300;
     void Start()
     {
         CurrentScore = 0;
@@ -81,7 +83,7 @@ public class LevelManager : MonoBehaviour
 
     public void FinalLevel()
     {
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < debugNumber; i++)
         {
             AddPoint();
         }
