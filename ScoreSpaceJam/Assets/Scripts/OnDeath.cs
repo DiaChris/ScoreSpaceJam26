@@ -11,12 +11,15 @@ public class OnDeath : MonoBehaviour
     
     public void DestroyPlayer()
     {
-        deathSound.Play();
-        Instantiate(shootFood);
+       
         Destroy(gameObject);
     }
+
     public void UnlivePlayer()
     {
+        deathSound.Play();
+        Instantiate(shootFood);
+        
         _OnDeathEvent.Invoke();
     }
 

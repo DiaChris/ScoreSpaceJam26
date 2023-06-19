@@ -2027,7 +2027,7 @@ Transform:
   - {fileID: 392128052}
   - {fileID: 2118787447}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472493302
 GameObject:
@@ -3091,6 +3091,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973016439}
   m_CullTransparentMesh: 1
+--- !u!1001 &986978723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 458.49768
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 458.49768
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 458.49768
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.638
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -174
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 132.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.07323259
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.07323259
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70330435
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70330435
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 168.111
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb64e59ade22ddf4aae1252686764234, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb64e59ade22ddf4aae1252686764234, type: 2}
+    - target: {fileID: -7511558181221131132, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb64e59ade22ddf4aae1252686764234, type: 2}
+    - target: {fileID: 919132149155446097, guid: a97cc66bc673d34469635ae94d424d8e,
+        type: 3}
+      propertyPath: m_Name
+      value: pipe_straight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97cc66bc673d34469635ae94d424d8e, type: 3}
 --- !u!1 &998398534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,7 +3633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1108949048
 GameObject:
@@ -3876,40 +3984,40 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.12888181
     - serializedVersion: 3
-      time: 50
-      value: 300
-      inSlope: 11.602633
-      outSlope: 11.602633
+      time: 53.040302
+      value: 37.743927
+      inSlope: 0.67461514
+      outSlope: 0.67461514
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.11696587
+      inWeight: 0.12757263
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 79.38062
-      value: 498.99213
-      inSlope: 2.3805153
-      outSlope: 2.3805153
+      time: 75.81806
+      value: 57.917145
+      inSlope: 1.0438036
+      outSlope: 1.0438036
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.25324118
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 90.2505
-      value: 619.0145
-      inSlope: 14.288814
-      outSlope: 14.288814
+      time: 92.19352
+      value: 73.5208
+      inSlope: 1.1547493
+      outSlope: 1.1547493
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.12306074
+      inWeight: 0.41756845
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 100
-      value: 1000
-      inSlope: 43.04611
-      outSlope: 43.04611
+      value: 150
+      inSlope: 11.935503
+      outSlope: 11.935503
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.082845725
+      inWeight: 0.30197775
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -3940,8 +4048,8 @@ MonoBehaviour:
       inWeight: 0.54512745
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 50.305023
-      value: 4.8630457
+      time: 49.60962
+      value: 7.0175257
       inSlope: -0.034849264
       outSlope: -0.034849264
       tangentMode: 0
@@ -3949,8 +4057,8 @@ MonoBehaviour:
       inWeight: 0.22343564
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 70.18739
-      value: 4.584097
+      time: 70.04831
+      value: 6.2256064
       inSlope: -0.1298035
       outSlope: -0.1298035
       tangentMode: 0
@@ -3959,9 +4067,9 @@ MonoBehaviour:
       outWeight: 0.21157959
     - serializedVersion: 3
       time: 100
-      value: 0.5
-      inSlope: -0.13699228
-      outSlope: -0.13699228
+      value: 1.5
+      inSlope: -0.15777428
+      outSlope: -0.15777428
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -4002,9 +4110,9 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 100
-      value: 10
-      inSlope: 0.20645079
-      outSlope: 0.20645079
+      value: 17
+      inSlope: 0.6808438
+      outSlope: 0.6808438
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -4019,17 +4127,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 10
-      inSlope: -0.075
-      outSlope: -0.075
+      inSlope: -0.09
+      outSlope: -0.09
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 100
-      value: 2.5
-      inSlope: -0.075
-      outSlope: -0.075
+      value: 1
+      inSlope: -0.09
+      outSlope: -0.09
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -4125,26 +4233,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 51.536865
       value: 10.70755
-      inSlope: 0.10708887
-      outSlope: 0.10708887
+      inSlope: 0.06238642
+      outSlope: 0.06238642
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.1591331
     - serializedVersion: 3
       time: 100
-      value: 13
-      inSlope: 0.010945762
-      outSlope: 0.010945762
+      value: 12
+      inSlope: 0.015073288
+      outSlope: 0.015073288
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.25336403
+      inWeight: 0.15497202
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   nextIntrument: 1
-  debugNumber: 300
+  debugNumber: 200
 --- !u!1001 &1239595090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4241,7 +4349,7 @@ PrefabInstance:
     - target: {fileID: 4497173317596826690, guid: 90ed17bafb5614754bba405def7db3a6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45
+      value: -62.9
       objectReference: {fileID: 0}
     - target: {fileID: 4497173317596826690, guid: 90ed17bafb5614754bba405def7db3a6,
         type: 3}
@@ -5271,7 +5379,7 @@ RectTransform:
   - {fileID: 274736422}
   - {fileID: 973016440}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5338,7 +5446,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1827723018
 GameObject:
@@ -5419,7 +5527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1836632025
 MonoBehaviour:
@@ -5865,7 +5973,113 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2035166288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035166292}
+  - component: {fileID: 2035166291}
+  - component: {fileID: 2035166290}
+  - component: {fileID: 2035166289}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &2035166289
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035166288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2035166290
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035166288}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 064465ca548b0b547918bc5a20f6a4ae, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2035166291
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035166288}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2035166292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035166288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -20.9, z: 0}
+  m_LocalScale: {x: 68.40834, y: 68.40834, z: 68.40834}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097839668
 GameObject:
@@ -6356,7 +6570,7 @@ Transform:
   - {fileID: 7625594184154980756}
   - {fileID: 1045281701}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4459931267243322687
 MonoBehaviour:
@@ -6607,10 +6821,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4459931267243322692}
-        m_TargetAssemblyTypeName: OnDeath, Assembly-CSharp
-        m_MethodName: DestroyPlayer
-        m_Mode: 1
+      - m_Target: {fileID: 1045281700}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7104530867437435694}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
