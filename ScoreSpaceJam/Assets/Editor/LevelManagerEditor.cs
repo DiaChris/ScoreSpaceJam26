@@ -42,6 +42,21 @@ public class LevelManagerEditor : Editor
         }
         EditorGUILayout.EndScrollView();
 
+
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Number of instruments.");
+        scroll5 = EditorGUILayout.BeginScrollView(scroll5, GUILayout.MaxHeight(300));
+        for (int i = 0; i < 100; i++)
+        {
+            EditorGUILayout.BeginHorizontal("box");
+            EditorGUILayout.LabelField("On level: " + (i));
+            EditorGUILayout.LabelField((int)(data._MusicInstrumentsCurve.Evaluate(i)) + " value" );
+            EditorGUILayout.EndHorizontal();
+        }
+        EditorGUILayout.EndScrollView();
+
+
         EditorGUILayout.Space();
 
         EditorGUILayout.LabelField("Dmg zone spawn delay.");
@@ -81,18 +96,7 @@ public class LevelManagerEditor : Editor
         }
         EditorGUILayout.EndScrollView();
 
-        EditorGUILayout.Space();
-
-        EditorGUILayout.LabelField("Number of instruments.");
-        scroll5 = EditorGUILayout.BeginScrollView(scroll5, GUILayout.MaxHeight(300));
-        for (int i = 0; i < 100; i++)
-        {
-            EditorGUILayout.BeginHorizontal("box");
-            EditorGUILayout.LabelField("On level: " + (i));
-            EditorGUILayout.LabelField((int)(data._MusicInstrumentsCurve.Evaluate(i)) + " value" );
-            EditorGUILayout.EndHorizontal();
-        }
-        EditorGUILayout.EndScrollView();
+        
         
     }
 }

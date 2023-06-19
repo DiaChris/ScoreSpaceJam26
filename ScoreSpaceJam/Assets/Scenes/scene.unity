@@ -3029,7 +3029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973016440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3923,7 +3923,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 10
+      value: 15
       inSlope: -0.11251436
       outSlope: -0.11251436
       tangentMode: 0
@@ -3931,8 +3931,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.65991664
     - serializedVersion: 3
-      time: 47.414497
-      value: 5.02623
+      time: 19.995003
+      value: 9.941376
       inSlope: -0.032131057
       outSlope: -0.032131057
       tangentMode: 0
@@ -3940,19 +3940,28 @@ MonoBehaviour:
       inWeight: 0.54512745
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 73.25357
-      value: 4.035226
-      inSlope: -0.07693759
-      outSlope: -0.07693759
+      time: 50.305023
+      value: 4.8630457
+      inSlope: -0.034849264
+      outSlope: -0.034849264
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.44649225
+      inWeight: 0.22343564
       outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 70.18739
+      value: 4.584097
+      inSlope: -0.1298035
+      outSlope: -0.1298035
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.21157959
     - serializedVersion: 3
       time: 100
       value: 0.5
-      inSlope: -0.13217562
-      outSlope: -0.13217562
+      inSlope: -0.13699228
+      outSlope: -0.13699228
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -4042,8 +4051,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.32052281
     - serializedVersion: 3
-      time: 34.479214
-      value: 5.883246
+      time: 5
+      value: 2
+      inSlope: 0.23675287
+      outSlope: 0.23675287
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 3
       inSlope: 0.16986729
       outSlope: 0.16986729
       tangentMode: 0
@@ -4051,13 +4069,67 @@ MonoBehaviour:
       inWeight: 0.22810762
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 60.487713
-      value: 10.634886
-      inSlope: 0.069566466
-      outSlope: 0.069566466
+      time: 15
+      value: 4
+      inSlope: 0.323218
+      outSlope: 0.323218
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 5
+      inSlope: 0.23881035
+      outSlope: 0.23881035
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9401947
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25
+      value: 6
+      inSlope: 0.14722939
+      outSlope: 0.14722939
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 30
+      value: 7
+      inSlope: 0.2589101
+      outSlope: 0.2589101
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.88178027
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
+      value: 8
+      inSlope: 0.12361232
+      outSlope: 0.12361232
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.22552851
+      outWeight: 0.092757
+    - serializedVersion: 3
+      time: 40
+      value: 9
+      inSlope: 0.11773169
+      outSlope: 0.11773169
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 51.536865
+      value: 10.70755
+      inSlope: 0.10708887
+      outSlope: 0.10708887
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 100
@@ -4072,6 +4144,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   nextIntrument: 1
+  debugNumber: 300
 --- !u!1001 &1239595090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6216,7 +6289,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3940380804701648772}
   serializedVersion: 4
-  m_Mass: 1.7
+  m_Mass: 1.6
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -6247,11 +6320,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737f941886a1eb4080f0682d9f468ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 9
+  playerSpeed: 10
   targetTransform: {fileID: 0}
   Strenght: 1
   explosionPosition: {fileID: 5791149856118968513}
-  jumpHeight: 700
+  jumpHeight: 800
   groundCheckHeight: 3
   jumpAn: {fileID: 8182009685161409572}
   conffetiParticles: {fileID: 1465791059309691883, guid: 651471a968c2c0541b9e228a31c68ac5,
